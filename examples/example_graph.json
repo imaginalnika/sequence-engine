@@ -1,0 +1,11 @@
+{
+  "start": "welcome",
+  "variables": {"permission": false},
+  "nodes": {
+    "welcome": {"title": "Welcome", "first_message": "Would you like to begin?"},
+    "complete": {"title": "Complete", "type": "terminal"}
+  },
+  "edges": [
+    {"from": "welcome", "to": "complete", "condition_ast": ["and", ["var", "permission"], ["turn", ">=", 2]]}
+  ]
+}
